@@ -1,4 +1,12 @@
 ### Hi there 👋
+## I am **Abhay**.😉
+You may know me by my 🐦**Flutter** Projects, but I do much more than that!
+
+Have a look at my work below!↓↓↓
+
+💬 Also, If you are interested in working with me then reach me on [Linkedin](https://www.linkedin.com/in/liquidatorcoder/)!
+
+😎 **Fun Fact:** I also design UI/UX for apps and websites!
 
 <!--
 **LiquidatorCoder/LiquidatorCoder** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

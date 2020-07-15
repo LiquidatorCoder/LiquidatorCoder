@@ -2,11 +2,13 @@
 ## I am **Abhay**.😉
 You may know me by my 🐦**Flutter** Projects, but I do much more than that!
 
-Have a look at my work below!↓↓↓
+Have a look at some of my work below!↓↓↓
 
 💬 Also, If you are interested in working with me then reach me on [Linkedin](https://www.linkedin.com/in/liquidatorcoder/)!
 
 😎 **Fun Fact:** I also design UI/UX for apps and websites!
+
+![Abhay's github stats](https://github-readme-stats.vercel.app/api?username=LiquidatorCoder&show_icons=true&title_color=74ff0a&icon_color=74ff0a&text_color=9f9f9f&bg_color=2D2D2D)
 
 <!--
 **LiquidatorCoder/LiquidatorCoder** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

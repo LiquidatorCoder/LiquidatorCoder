@@ -22,8 +22,8 @@
 - **Backend -** Flask, Express.js, Node.js, Strapi (CMS)
 - **Dev Essentials -** Git, GitHub, Terminal, VS Code, NeoVim
 - **Designing -** Adobe Illustrator, Blender, Figma, Rive, Inkscape
-- **Hardware Langs. -** VHDL, MATLAB, Lua, Embedded C++
-- **Hardware Tools -** OrCAD Capture CIS, Xilinx ISE, Coppelia Sim
+- **Hardware Langs. -** x86 ASM, VHDL, MATLAB, Lua, Embedded C++
+- **Hardware Tools -** MASM, OrCAD Capture CIS, Xilinx ISE, Coppelia Sim
 - **Data Science -** NumPy, Pandas, Jupyter Notebook
 - **Other -** FL Studio, Adobe Premiere Pro, Adobe Photoshop
 

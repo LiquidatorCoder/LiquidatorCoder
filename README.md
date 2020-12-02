@@ -39,6 +39,7 @@ Let's build something great together!
 
 [![Abhay's Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LiquidatorCoder&layout=compact&title_color=74ff0a&icon_color=74ff0a&text_color=9f9f9f&bg_color=2D2D2D)](https://github.com/LiquidatorCoder?tab=repositories)
 
+![Abhay's Profile Views](https://komarev.com/ghpvc/?username=LiquidatorCoder&color=74ff0a)
 <!--
 **LiquidatorCoder/LiquidatorCoder** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 

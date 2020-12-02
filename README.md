@@ -1,24 +1,38 @@
-### Hi there 👋
-### I am **Abhay**.✌
+### Hey, buddy! 👋
+#### I am **Abhay** from India.✌
 
-Here are some facts about me ->
+-------------
+#### Here are some facts about me ->
 
-➡ I am an experienced programmer with having knowledge of many programming languages like Python, Dart, C++, JavaScript, etc.
+- I am an experienced programmer with having knowledge of many programming languages like Python, Dart, C++, JavaScript, etc.
+- I have successfully published dozens of cross-platform apps using Google's Flutter Framework.
+- I have also designed UI/UX for most of these apps.
+- Lately, I have also studying Material Design by designing multiple app icons.
+- I also have great knowledge of managing these apps. I have done multiple projects which support linking to Google Analytics, Google AdMob, Google AdSense, Google Firebase, etc.
+- Other than coding and designing, I enjoy listening and producing electronic music.
+- I am also very tech-savvy. And I enjoy talking tech with anyone!
 
-➡ I have successfully published dozens of cross-platform apps using Google's Flutter Framework.
+----------
 
-➡ Most of the design work in these apps was done by me, as I am also an experienced UI/UX Designer.
+#### Here is my skill set ->
 
-➡ I also have great knowledge of managing these apps. I have done multiple projects which support linking to Google Analytics, Google AdMob, Google AdSense, Google Firebase, etc.
+- **Programming Langs. -** Python, DART, JavaScript, C, C++
+- **Databases -** MongoDB, Firebase, MySQL, SQLite3, Hive, Redis
+- **Frontend -** Flutter, Flame, Kivy, HTML5, CSS3, Vanilla JS, Vue.js
+- **Backend -** Flask, Express.js, Node.js, Strapi (CMS)
+- **Dev Essentials -** Git, GitHub, Terminal, VS Code, NeoVim
+- **Designing -** Adobe Illustrator, Blender, Figma, Rive, Inkscape
+- **Hardware Langs. -** VHDL, MATLAB, Lua, Embedded C++
+- **Hardware Tools -** OrCAD Capture CIS, Xilinx ISE, Coppelia Sim
+- **Data Science -** NumPy, Pandas, Jupyter Notebook
+- **Other -** FL Studio, Adobe Premiere Pro, Adobe Photoshop
 
-➡ I am also an experienced Linux user as I have been using Linux for about 4 years now.
-
-➡ I also have knowledge of tools which are required in day-to-day development tasks, like, Git, GitHub, NeoVim, Terminal, VS Code, MongoDB, Redis, Node.js, etc.
-
+----------
 
 Have a look at some of my work below!↓↓↓
 
 💬 Also, If you are interested in working with me then reach me on [Linkedin](https://www.linkedin.com/in/liquidatorcoder/)!
+Let's build something great together!
 
 ![Abhay's github stats](https://github-readme-stats.vercel.app/api?username=LiquidatorCoder&show_icons=true&title_color=74ff0a&icon_color=74ff0a&text_color=9f9f9f&bg_color=2D2D2D)
 

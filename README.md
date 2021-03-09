@@ -34,10 +34,10 @@ Have a look at some of my work below!↓↓↓
 💬 Also, If you are interested in working with me then reach me on [Linkedin](https://www.linkedin.com/in/liquidatorcoder/)!
 Let's build something great together!
 
-![Abhay's github stats](https://github-readme-stats.vercel.app/api?username=LiquidatorCoder&show_icons=true&title_color=74ff0a&icon_color=74ff0a&text_color=9f9f9f&bg_color=2D2D2D)
+|  Stats      | Langs           | Streak  |
+|:-------------:|:-------------:|:-----:|
+| ![Abhay's github stats](https://github-readme-stats.vercel.app/api?username=LiquidatorCoder&show_icons=true&title_color=74ff0a&icon_color=74ff0a&text_color=9f9f9f&bg_color=2D2D2D)      | [![Abhay's Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LiquidatorCoder&layout=compact&title_color=74ff0a&icon_color=74ff0a&text_color=9f9f9f&bg_color=2D2D2D)](https://github.com/LiquidatorCoder?tab=repositories) | [![Abhay's GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=LiquidatorCoder&theme=dark&background=2D2D2D&currStreakLabel=74ff0a&ring=74ff0a&fire=74ff0a&sideLabels=74ff0a)](https://github.com/LiquidatorCoder?tab=repositories) |
 
-
-[![Abhay's Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LiquidatorCoder&layout=compact&title_color=74ff0a&icon_color=74ff0a&text_color=9f9f9f&bg_color=2D2D2D)](https://github.com/LiquidatorCoder?tab=repositories)
 
 ![Abhay's Profile Views](https://komarev.com/ghpvc/?username=LiquidatorCoder&color=74ff0a)
 <!--

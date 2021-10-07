@@ -1,38 +1,30 @@
-### Hey, buddy! 👋
-#### I am **Abhay** from India.✌
+<br/>
 
--------------
-#### Here are some facts about me ->
+> **“Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.”**
+> 
+> – Patrick McKenzie
+<br />
 
-- I am an experienced programmer with having knowledge of many programming languages like Python, Dart, C++, JavaScript, etc.
-- I have successfully published dozens of cross-platform apps using Google's Flutter Framework.
-- I have also designed UI/UX for most of these apps.
-- Lately, I have also studying Material Design by designing multiple app icons.
-- I also have great knowledge of managing these apps. I have done multiple projects which support linking to Google Analytics, Google AdMob, Google AdSense, Google Firebase, etc.
-- Other than coding and designing, I enjoy listening and producing electronic music.
-- I am also very tech-savvy. And I enjoy talking tech with anyone!
+### Yo, buddy! 👋 I am **_Abhay Maurya_** from India. ✌
 
-----------
+I am currently in my final year of B.Tech at University School of Information, Communication and Technology and am looking for full-time Flutter dev job opportunities.
 
-#### Here is my skill set ->
 
-- **Programming Langs. -** Python, DART, JavaScript, C, C++
-- **Databases -** MongoDB, Firebase, MySQL, SQLite3, Hive, Redis
-- **Frontend -** Flutter, Flame, Kivy, HTML5, CSS3, Vanilla JS, Vue.js
-- **Backend -** Flask, Express.js, Node.js, Strapi (CMS)
-- **Dev Essentials -** Git, GitHub, Terminal, VS Code, NeoVim
-- **Designing -** Adobe Illustrator, Blender, Figma, Rive, Inkscape
-- **Hardware Langs. -** x86 ASM, VHDL, MATLAB, Lua, Embedded C++
-- **Hardware Tools -** MASM, OrCAD Capture CIS, Xilinx ISE, Coppelia Sim
-- **Data Science -** NumPy, Pandas, Jupyter Notebook
-- **Other -** FL Studio, Adobe Premiere Pro, Adobe Photoshop
+#### Here are some facts about me -
 
-----------
+- I love Flutter, and Dart 💙.
+- I love tranforming unique ideas into reality. ✨ (Ex - Among Us avatar generator, BoxDash - A hyper casual game, Kivas - Algorithmic art generator)
+- I love electronic music (from Future Bass to Melodic Dubstep) 🎶.
+- I am currently developing my own portfolio website using Flutter (which you can check out [here](https://lcdev.netlify.app)) 🌐.
+- I am also very tech-savvy. And I enjoy talking tech with anyone 🧑‍💻!
 
-Have a look at some of my work below!↓↓↓
+<br />
 
-💬 Also, If you are interested in working with me then reach me on [Linkedin](https://www.linkedin.com/in/liquidatorcoder/)!
-Let's build something great together!
+Have a look at some of my work below! ⬇️
+
+💬 Also, If you are interested in building something cool with me then reach me at [Linkedin](https://www.linkedin.com/in/liquidatorcoder/) or [Twitter](https://twitter.com/LiquidatorAB)!
+
+<br/><br/>
 
 |  Stats      | Langs           | Streak  |
 |:-------------:|:-------------:|:-----:|
@@ -40,6 +32,7 @@ Let's build something great together!
 
 
 ![Abhay's Profile Views](https://komarev.com/ghpvc/?username=LiquidatorCoder&color=74ff0a)
+
 <!--
 **LiquidatorCoder/LiquidatorCoder** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 

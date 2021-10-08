@@ -1,31 +1,24 @@
-<br/>
-
-> **“Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.”**
-> 
-> – Patrick McKenzie
-<br />
-
 ### Yo, buddy! 👋 I am **_Abhay Maurya_** from India. ✌
 
 I am currently in my final year of B.Tech at University School of Information, Communication and Technology and am looking for full-time Flutter dev job opportunities.
 
+----
 
 #### Here are some facts about me -
 
 - I love Flutter, and Dart 💙.
-- I love tranforming unique ideas into reality. ✨ (Ex - Among Us avatar generator, BoxDash - A hyper casual game, Kivas - Algorithmic art generator)
+- I love transforming unique ideas into reality. ✨ (Ex - Among Us avatar generator, BoxDash - A hyper casual game, Kivas - Algorithmic art generator)
 - I am currently developing my own portfolio website using Flutter (which you can check out [here](https://lcdev.netlify.app)) 🌐.
 - I love animes from Shounen to Isekai 🥷.
 - I love electronic music (from Future Bass to Melodic Dubstep) 🎶.
 - I am also very tech-savvy. And I enjoy talking tech with anyone 🧑‍💻!
-
-<br />
+----
 
 Have a look at some of my work below! ⬇️
 
 💬 Also, If you are interested in building something cool with me then reach me at [Linkedin](https://www.linkedin.com/in/liquidatorcoder/) or [Twitter](https://twitter.com/LiquidatorAB)!
 
-<br/><br/>
+----
 
 |  Stats      | Langs           | Streak  |
 |:-------------:|:-------------:|:-----:|

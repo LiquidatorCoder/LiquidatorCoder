@@ -12,6 +12,14 @@ I am currently in my final year of B.Tech at University School of Information, C
 - I love animes from Shounen to Isekai 🥷.
 - I love electronic music (from Future Bass to Melodic Dubstep) 🎶.
 - I am also very tech-savvy. And I enjoy talking tech with anyone 🧑‍💻!
+
+----
+
+#### My recent blogs -
+
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
 ----
 
 Have a look at some of my work below! ⬇️

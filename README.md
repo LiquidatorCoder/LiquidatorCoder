@@ -18,6 +18,7 @@ I am currently in my final year of B.Tech at University School of Information, C
 #### My recent blogs -
 
 <!-- BLOG-POST-LIST:START -->
+- [Building your first app in Flutter](https://liquidatorcoder.medium.com/building-your-first-app-in-flutter-ed10e971cc21?source=rss-b46c583c10b2------2)
 - [Effective Skeleton Loader in Flutter](https://liquidatorcoder.medium.com/effective-skeleton-loader-in-flutter-b567e60d5314?source=rss-b46c583c10b2------2)
 - [Making your first game in Kivy &amp; Python](https://medium.com/techspace-usict/making-your-first-game-in-kivy-python-91fcda83aa5c?source=rss-b46c583c10b2------2)
 <!-- BLOG-POST-LIST:END -->

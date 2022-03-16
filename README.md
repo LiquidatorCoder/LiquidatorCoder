@@ -9,7 +9,7 @@ I am currently in my final year of B.Tech at University School of Information, C
 - I love Flutter, and Dart 💙.
 - I love transforming unique ideas into reality. ✨ (Ex - Among Us avatar generator, BoxDash - A hyper casual game, Kivas - Algorithmic art generator)
 - I am currently developing my own portfolio website using Flutter (which you can check out [here](https://lcdev.netlify.app)) 🌐.
-- I love animes from Shounen to Isekai 🥷.
+- I love animes from Shounen to Isekai and ecchi 🥷.
 - I love electronic music (from Future Bass to Melodic Dubstep) 🎶.
 - I am also very tech-savvy. And I enjoy talking tech with anyone 🧑‍💻!
 

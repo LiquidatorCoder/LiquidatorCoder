@@ -1,21 +1,24 @@
-### Yo, buddy! 👋 I am **_Abhay Maurya_** from India. ✌
+Hey! 👋  
 
-I am currently in my final year of B.Tech at University School of Information, Communication and Technology and am looking for full-time Flutter dev job opportunities.
+I am **_Abhay Maurya_** from India. ✌
 
-----
-
-#### Here are some facts about me -
-
-- I love Flutter, and Dart 💙.
-- I love transforming unique ideas into reality. ✨ (Ex - Among Us avatar generator, BoxDash - A hyper casual game, Kivas - Algorithmic art generator)
-- I am currently developing my own portfolio website using Flutter (which you can check out [here](https://lcdev.netlify.app)) 🌐.
-- I love animes from Shounen to Isekai 🥷.
-- I love electronic music (from Future Bass to Melodic Dubstep) 🎶.
-- I am also very tech-savvy. And I enjoy talking tech with anyone 🧑‍💻!
+I am currently working as a Software Engineer at [_FrontRow_](https://frontrow.co.in/) and am also working on some of my side projects along with the [_Hash Studio team_](https://hashstudios.dev/team).
 
 ----
 
-#### My recent blogs -
+#### Here are some facts about me →
+
+- I love Flutter, and Dart 💙
+- I love transforming unique ideas into reality ✨
+  - Some examples - Among Us avatar generator, BoxDash - A hyper casual game, Kivas - Algorithmic art generator
+- I am currently developing my own portfolio website using Flutter, which you can check out [here](https://lcdev.netlify.app) [🌐](https://lcdev.netlify.app)
+- I love animes [🥷](https://myanimelist.net/profile/LiquidatorAB)
+- I love electronic music 🎶
+- I am also very tech-savvy, and enjoy talking tech with anyone 🧑‍💻!
+
+----
+
+#### My recent blogs →
 
 <!-- BLOG-POST-LIST:START -->
 - [Building your first app in Flutter](https://liquidatorcoder.medium.com/building-your-first-app-in-flutter-ed10e971cc21?source=rss-b46c583c10b2------2)
@@ -25,15 +28,15 @@ I am currently in my final year of B.Tech at University School of Information, C
 
 ----
 
-Have a look at some of my work below! ⬇️
-
-💬 Also, If you are interested in building something cool with me then reach me at [Linkedin](https://www.linkedin.com/in/liquidatorcoder/) or [Twitter](https://twitter.com/LiquidatorAB)!
-
-----
-
 |  Stats      | Langs           | Streak  |
 |:-------------:|:-------------:|:-----:|
 | ![Abhay's github stats](https://github-readme-stats.vercel.app/api?username=LiquidatorCoder&show_icons=true&title_color=74ff0a&icon_color=74ff0a&text_color=9f9f9f&bg_color=2D2D2D)      | [![Abhay's Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LiquidatorCoder&layout=compact&title_color=74ff0a&icon_color=74ff0a&text_color=9f9f9f&bg_color=2D2D2D)](https://github.com/LiquidatorCoder?tab=repositories) | [![Abhay's GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=LiquidatorCoder&theme=dark&background=2D2D2D&currStreakLabel=74ff0a&ring=74ff0a&fire=74ff0a&sideLabels=74ff0a)](https://github.com/LiquidatorCoder?tab=repositories) |
+
+----
+
+Have a look at some of my work below! ⬇️
+
+💬 Also, If you are interested in building something cool with me then reach me at [Linkedin](https://www.linkedin.com/in/liquidatorcoder/) or [Twitter](https://twitter.com/LiquidatorAB)!
 
 
 ![Abhay's Profile Views](https://komarev.com/ghpvc/?username=LiquidatorCoder&color=74ff0a)

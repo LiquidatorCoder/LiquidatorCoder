@@ -2,7 +2,7 @@ Hey! 👋
 
 I am **_Abhay Maurya_** from India. ✌
 
-I am currently working as a Software Engineer at [_FrontRow_](https://frontrow.co.in/) and am also working on some of my side projects along with the [_Hash Studio team_](https://hashstudios.dev/team).
+I am currently working as a Mobile Engineer at [_CRED_](https://cred.club/) and am also working on some of my side projects along with the [_Hash Studio team_](https://hashstudios.dev/team).
 
 ----
 
@@ -11,9 +11,9 @@ I am currently working as a Software Engineer at [_FrontRow_](https://frontrow.c
 - I love Flutter, and Dart 💙
 - I love transforming unique ideas into reality ✨
   - Some examples - Among Us avatar generator, BoxDash - A hyper casual game, Kivas - Algorithmic art generator
-- I am currently developing my own portfolio website using Flutter, which you can check out [here](https://lcdev.netlify.app) [🌐](https://lcdev.netlify.app)
-- I love animes [🥷](https://myanimelist.net/profile/LiquidatorAB)
-- I love electronic music 🎶
+- I am currently developing my own portfolio website using Flutter, which you can check out [here](https://abhaymaurya.xyz) [🌐]([https://lcdev.netlify.app](https://abhaymaurya.xyz))
+- I love [animes](https://myanimelist.net/profile/LiquidatorAB) [🥷](https://myanimelist.net/profile/LiquidatorAB)
+- I love electronic [music](https://open.spotify.com/playlist/2tZZc1UZ8IfRhRECcLsVxO?si=60f01a6974394eac) [🎶](https://open.spotify.com/playlist/2tZZc1UZ8IfRhRECcLsVxO?si=60f01a6974394eac)
 - I am also very tech-savvy, and enjoy talking tech with anyone 🧑‍💻!
 
 ----

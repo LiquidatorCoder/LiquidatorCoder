@@ -50,3 +50,9 @@ Open to freelance and early-stage work.
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=LiquidatorCoder&layout=compact&theme=github_dark&hide_border=true">
   <img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=LiquidatorCoder&layout=compact&hide_border=true">
 </picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=LiquidatorCoder&theme=github-dark-blue&hide_border=true">
+  <img alt="GitHub streak" src="https://streak-stats.demolab.com/?user=LiquidatorCoder&hide_border=true">
+</picture>
+
+![Profile views](https://komarev.com/ghpvc/?username=LiquidatorCoder&color=74ff0a)

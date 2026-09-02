@@ -1,57 +1,58 @@
-Hey! 👋  
+# Abhay Maurya
 
-I am **_Abhay Maurya_** from India. ✌
+Flutter engineer and occasional designer, based in Bengaluru.
+I build zero-to-one mobile apps and publish the parts I keep reusing as open-source packages.
 
-I am currently working as a Mobile Engineer at [_CRED_](https://cred.club/) and am also working on some of my side projects along with the [_Hash Studio team_](https://hashstudios.dev/team).
+Open to freelance and early-stage work.
 
-----
+[Portfolio](https://abhaymaurya.com) · [LinkedIn](https://www.linkedin.com/in/liquidatorcoder/) · [X](https://x.com/LiquidatorAB_) · [Medium](https://liquidatorcoder.medium.com)
 
-#### Here are some facts about me →
+## Projects
 
-- I love Flutter, and Dart 💙
-- I love transforming unique ideas into reality ✨
-  - Some examples - Among Us avatar generator, BoxDash - A hyper casual game, Kivas - Algorithmic art generator
-- I am currently developing my own portfolio website using Flutter, which you can check out [here](https://abhaymaurya.xyz) [🌐]([https://lcdev.netlify.app](https://abhaymaurya.xyz))
-- I love [animes](https://myanimelist.net/profile/LiquidatorAB) [🥷](https://myanimelist.net/profile/LiquidatorAB)
-- I love electronic [music](https://open.spotify.com/playlist/2tZZc1UZ8IfRhRECcLsVxO?si=60f01a6974394eac) [🎶](https://open.spotify.com/playlist/2tZZc1UZ8IfRhRECcLsVxO?si=60f01a6974394eac)
-- I am also very tech-savvy, and enjoy talking tech with anyone 🧑‍💻!
+| Project | What it is |
+| :-- | :-- |
+| [edie](https://edie.video) | AI video editing on your phone. Describe the cut, get a real timeline back, finish it by hand. iOS first, no watermark. |
+| [SplitFast](https://splitfast.app) | Split shared expenses with a group. No app or signup, just open the link and join. |
+| [fluttertune](https://fluttertune.com) | AI-powered Flutter performance optimisation. Diagnose jank, reduce startup time, ship smoother apps. |
+| [croomfs](https://croomfs.com) | Log in with X, see people your mutuals follow, crush on a tweet instead of a photo. |
+| [Turn It Gen Z](https://turnitgenz.com) | Turn any text into Gen Z slang. Pick a vibe, translate for free. |
+| [Hash Studios](https://hashstudios.in) | A two-person studio designing and building Flutter apps and performance work for founders. |
 
-----
+## Flutter packages
 
-#### My recent blogs →
+| Package | Description |
+| :-- | :-- |
+| [bubbles_sheet](https://pub.dev/packages/bubbles_sheet) [![pub](https://img.shields.io/pub/v/bubbles_sheet?label=)](https://pub.dev/packages/bubbles_sheet) | Pill-shouldered, iOS 26-style modal bottom sheets with detents, edge-flush corners, and sticky CTAs. |
+| [morph_route](https://pub.dev/packages/morph_route) [![pub](https://img.shields.io/pub/v/morph_route?label=)](https://pub.dev/packages/morph_route) | iOS 26-inspired container morph. Backdrop blur, accent scrim, and 3D tilt for tile-to-screen navigation. |
+| [flywheel_carousel](https://pub.dev/packages/flywheel_carousel) [![pub](https://img.shields.io/pub/v/flywheel_carousel?label=)](https://pub.dev/packages/flywheel_carousel) | A free-spinning, arc-shaped carousel. Flicks coast under friction and snap to the nearest card. |
+| [flutter_mesh_transform](https://pub.dev/packages/flutter_mesh_transform) [![pub](https://img.shields.io/pub/v/flutter_mesh_transform?label=)](https://pub.dev/packages/flutter_mesh_transform) | Drop-in mesh distortion for any widget, driven by a spring simulation and a fragment shader. |
+| [arsenal](https://pub.dev/packages/arsenal) [![pub](https://img.shields.io/pub/v/arsenal?label=)](https://pub.dev/packages/arsenal) | A cyberpunk-inspired design system: components, theme, typography, and bundled display fonts. |
+| [flip_card_swiper](https://pub.dev/packages/flip_card_swiper) [![pub](https://img.shields.io/pub/v/flip_card_swiper?label=)](https://pub.dev/packages/flip_card_swiper) | A swipeable card widget with smooth flip animations and haptics. |
+| [flutter_debug_tools](https://pub.dev/packages/flutter_debug_tools) [![pub](https://img.shields.io/pub/v/flutter_debug_tools?label=)](https://pub.dev/packages/flutter_debug_tools) | In-app tools for finding UI and performance issues without leaving the app. |
+| [better_textfield](https://pub.dev/packages/better_textfield) [![pub](https://img.shields.io/pub/v/better_textfield?label=)](https://pub.dev/packages/better_textfield) | Easy size control over text fields. |
+
+## Writing
 
 <!-- BLOG-POST-LIST:START -->
-- [Building your first app in Flutter](https://liquidatorcoder.medium.com/building-your-first-app-in-flutter-ed10e971cc21?source=rss-b46c583c10b2------2)
-- [Effective Skeleton Loader in Flutter](https://liquidatorcoder.medium.com/effective-skeleton-loader-in-flutter-b567e60d5314?source=rss-b46c583c10b2------2)
-- [Making your first game in Kivy &amp; Python](https://medium.com/techspace-usict/making-your-first-game-in-kivy-python-91fcda83aa5c?source=rss-b46c583c10b2------2)
+- [Creating a smooth stacked cards animation in Flutter](https://liquidatorcoder.medium.com/creating-a-smooth-stacked-cards-animation-in-flutter)
+- [Building your first app in Flutter](https://liquidatorcoder.medium.com/building-your-first-app-in-flutter-ed10e971cc21)
+- [Effective Skeleton Loader in Flutter](https://liquidatorcoder.medium.com/effective-skeleton-loader-in-flutter-b567e60d5314)
+- [Making your first game in Kivy & Python](https://medium.com/techspace-usict/making-your-first-game-in-kivy-python-91fcda83aa5c)
 <!-- BLOG-POST-LIST:END -->
 
-----
+## Stats
 
-|  Stats      | Langs           | Streak  |
-|:-------------:|:-------------:|:-----:|
-| ![Abhay's github stats](https://github-readme-stats.vercel.app/api?username=LiquidatorCoder&show_icons=true&title_color=74ff0a&icon_color=74ff0a&text_color=9f9f9f&bg_color=2D2D2D)      | [![Abhay's Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LiquidatorCoder&layout=compact&title_color=74ff0a&icon_color=74ff0a&text_color=9f9f9f&bg_color=2D2D2D)](https://github.com/LiquidatorCoder?tab=repositories) | [![Abhay's GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=LiquidatorCoder&theme=dark&background=2D2D2D&currStreakLabel=74ff0a&ring=74ff0a&fire=74ff0a&sideLabels=74ff0a)](https://github.com/LiquidatorCoder?tab=repositories) |
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=LiquidatorCoder&show_icons=true&theme=github_dark&hide_border=true">
+  <img alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=LiquidatorCoder&show_icons=true&hide_border=true">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=LiquidatorCoder&layout=compact&theme=github_dark&hide_border=true">
+  <img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=LiquidatorCoder&layout=compact&hide_border=true">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=LiquidatorCoder&theme=github-dark-blue&hide_border=true">
+  <img alt="GitHub streak" src="https://streak-stats.demolab.com/?user=LiquidatorCoder&hide_border=true">
+</picture>
 
-----
-
-Have a look at some of my work below! ⬇️
-
-💬 Also, If you are interested in building something cool with me then reach me at [Linkedin](https://www.linkedin.com/in/liquidatorcoder/) or [Twitter](https://twitter.com/LiquidatorAB)!
-
-
-![Abhay's Profile Views](https://komarev.com/ghpvc/?username=LiquidatorCoder&color=74ff0a)
-
-<!--
-**LiquidatorCoder/LiquidatorCoder** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+![Profile views](https://komarev.com/ghpvc/?username=LiquidatorCoder&color=74ff0a)

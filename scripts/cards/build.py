@@ -71,18 +71,18 @@ THEMES = {
         surface="#18181c",
         border_color="#ffffff", border_top=0.14, border_bottom=0.04,
         text="#f5f5f7", text2="rgba(235,235,245,0.62)", text3="rgba(235,235,245,0.34)",
-        accent="#e8734a", accent_text="#f08a63", accent_soft="rgba(232,115,74,0.16)",
-        tile="rgba(255,255,255,0.06)", tile2="rgba(255,255,255,0.11)", tile3="rgba(255,255,255,0.18)",
-        ink="#0b0b12", on_accent="#fff7f3",
+        accent="#f5f5f7", accent_text="#f5f5f7", accent_soft="rgba(245,245,247,0.12)",
+        tile="rgba(255,255,255,0.06)", tile2="rgba(255,255,255,0.11)", tile3="rgba(255,255,255,0.20)",
+        ink="#0b0b12", on_accent="#1c1c1e",
         shadow=False,
     ),
     "light": dict(
         surface="#fbfbfd",
         border_color="#000000", border_top=0.06, border_bottom=0.10,
         text="#1c1c1e", text2="rgba(60,60,67,0.64)", text3="rgba(60,60,67,0.38)",
-        accent="#e8734a", accent_text="#c9582a", accent_soft="rgba(232,115,74,0.14)",
-        tile="rgba(28,28,30,0.05)", tile2="rgba(28,28,30,0.10)", tile3="rgba(28,28,30,0.16)",
-        ink="#1c1c1e", on_accent="#fff7f3",
+        accent="#1c1c1e", accent_text="#1c1c1e", accent_soft="rgba(28,28,30,0.08)",
+        tile="rgba(28,28,30,0.05)", tile2="rgba(28,28,30,0.10)", tile3="rgba(28,28,30,0.18)",
+        ink="#1c1c1e", on_accent="#fbfbfd",
         shadow=True,
     ),
 }
@@ -264,8 +264,10 @@ def hero(theme: str) -> str:
     c.style(rise_css(4))
 
     # a fanned deck of three cards: the recurring object in the work (cards, sheets, tiles)
+    hi = "#ffffff" if theme == "dark" else "#4a4a52"
+    lo = "#d6d6dc" if theme == "dark" else t["accent"]
     c.define(f'<linearGradient id="ac" x1="0" y1="0" x2="1" y2="1">'
-             f'<stop offset="0" stop-color="#f28b5f"/><stop offset="1" stop-color="{t["accent"]}"/></linearGradient>')
+             f'<stop offset="0" stop-color="{hi}"/><stop offset="1" stop-color="{lo}"/></linearGradient>')
     cx, cy = GRID - 184, 132
     cards = [
         ("k3", t["tile"]),
@@ -276,9 +278,10 @@ def hero(theme: str) -> str:
     for cls, fill in cards:
         c.add(f'<g class="k {cls}"><rect x="-70" y="-46" width="140" height="92" rx="16" fill="{fill}"/>')
         if cls == "k1":
-            c.add('<circle cx="-46" cy="-22" r="9" fill="#fff" fill-opacity=".45"/>'
-                  '<rect x="-52" y="12" width="60" height="6" rx="3" fill="#fff" fill-opacity=".5"/>'
-                  '<rect x="-52" y="24" width="36" height="6" rx="3" fill="#fff" fill-opacity=".3"/>')
+            d = t["on_accent"]
+            c.add(f'<circle cx="-46" cy="-22" r="9" fill="{d}" fill-opacity=".35"/>'
+                  f'<rect x="-52" y="12" width="60" height="6" rx="3" fill="{d}" fill-opacity=".4"/>'
+                  f'<rect x="-52" y="24" width="36" height="6" rx="3" fill="{d}" fill-opacity=".22"/>')
         c.add("</g>")
     c.add("</g></g>")
     c.style(
@@ -342,12 +345,12 @@ def motif_area(c: Card, w: int, h: int = 108):
 def edie_motif(c: Card, w: int):
     t = c.t
     cid, x, y, mw, mh = motif_area(c, w)
-    bg = "#1f1a18" if c.theme == "dark" else "#f6e9e2"
+    bg = "#202024" if c.theme == "dark" else "#ececf0"
     lane = "rgba(255,255,255,0.05)" if c.theme == "dark" else "rgba(28,28,30,0.05)"
     clip_fill = "rgba(255,255,255,0.16)" if c.theme == "dark" else "rgba(28,28,30,0.14)"
     c.add(f'<g clip-path="url(#{cid})"><rect x="{x}" y="{y}" width="{mw}" height="{mh}" fill="{bg}"/>')
     c.define('<radialGradient id="glow" cx="0.15" cy="0.5" r="0.7">'
-             f'<stop offset="0" stop-color="{t["accent"]}" stop-opacity=".28"/><stop offset="1" stop-color="{t["accent"]}" stop-opacity="0"/></radialGradient>')
+             f'<stop offset="0" stop-color="{t["accent"]}" stop-opacity=".10"/><stop offset="1" stop-color="{t["accent"]}" stop-opacity="0"/></radialGradient>')
     c.add(f'<rect x="{x}" y="{y}" width="{mw}" height="{mh}" fill="url(#glow)"/>')
     rows = [y + 20, y + 46, y + 72]
     for ry in rows:
@@ -529,8 +532,8 @@ def m_morph_route(c: Card):
     tx, ty = x + 20, y + 30
     c.add(f'<rect class="tile" x="{tx}" y="{ty}" width="24" height="24" rx="7" fill="{t["accent"]}"/>')
     c.add(f'<g class="big"><rect x="{x + 40}" y="{y + 10}" width="{w - 56}" height="{h - 20}" rx="12" fill="{t["accent"]}"/>'
-          f'<rect x="{x + 54}" y="{y + 26}" width="60" height="7" rx="3.5" fill="#fff" fill-opacity=".55"/>'
-          f'<rect x="{x + 54}" y="{y + 40}" width="40" height="7" rx="3.5" fill="#fff" fill-opacity=".3"/></g>')
+          f'<rect x="{x + 54}" y="{y + 26}" width="60" height="7" rx="3.5" fill="{t["on_accent"]}" fill-opacity=".55"/>'
+          f'<rect x="{x + 54}" y="{y + 40}" width="40" height="7" rx="3.5" fill="{t["on_accent"]}" fill-opacity=".3"/></g>')
     c.style(
         ".tile{transform-box:fill-box;transform-origin:center;animation:tile 5s $INOUT infinite}"
         "@keyframes tile{0%,18%{transform:scale(1);opacity:1}40%,68%{transform:scale(5);opacity:0}86%,100%{transform:scale(1);opacity:1}}"
@@ -587,7 +590,7 @@ def m_arsenal(c: Card):
     c.add(f'<path d="M{R_ - 26},{T_ + 12} h14 v14" fill="none" stroke="{t["accent"]}" stroke-width="1.5"/>'
           f'<path d="M{L + 26},{B - 12} h-14 v-14" fill="none" stroke="{t["accent"]}" stroke-width="1.5"/></g>')
     c.define(f'<linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{t["accent"]}" stop-opacity="0"/>'
-             f'<stop offset="1" stop-color="{t["accent"]}" stop-opacity=".45"/></linearGradient>')
+             f'<stop offset="1" stop-color="{t["accent"]}" stop-opacity=".28"/></linearGradient>')
     c.add(f'<rect class="scan" x="{L}" y="{T_ - 12}" width="{R_ - L}" height="12" fill="url(#scan)"/>')
     c.add("</g>")
     c.style(
@@ -607,7 +610,7 @@ def m_flip(c: Card):
           f'<rect x="{cx - 17}" y="{cy - 22}" width="34" height="6" rx="3" fill="{t["text3"]}"/>'
           f'<rect x="{cx - 17}" y="{cy - 10}" width="22" height="6" rx="3" fill="{t["text3"]}"/></g>'
           f'<g class="back"><rect x="{cx - 27}" y="{cy - 37}" width="54" height="74" rx="8" fill="{t["accent"]}"/>'
-          f'<circle cx="{cx}" cy="{cy}" r="12" fill="#fff" fill-opacity=".5"/></g></g>')
+          f'<circle cx="{cx}" cy="{cy}" r="12" fill="{t["on_accent"]}" fill-opacity=".5"/></g></g>')
     c.add("</g>")
     c.style(
         ".fc{transform-box:fill-box;transform-origin:center;animation:flip 4.5s %s infinite}" % EASE_INOUT +

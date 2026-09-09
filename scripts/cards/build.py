@@ -90,6 +90,8 @@ THEMES = {
 FONT_STACK = "'Inter',-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif"
 INSET = 8
 RADIUS = 20
+# GitHub renders the profile README in an 846px column; the grid is 840 with 16px gutters
+GRID, WIDE, COL3, COL4 = 840, 560, 280, 210
 
 
 def esc(s: str) -> str:
@@ -247,7 +249,7 @@ def rise_css(count: int, base_delay=0.05, step=0.1) -> str:
 # --------------------------------------------------------------------------- hero
 
 def hero(theme: str) -> str:
-    c = Card(theme, 864, 260)
+    c = Card(theme, GRID, 260)
     t = c.t
     x = 40
     c.text(x, 88, "Abhay Maurya", 40, 700, t["text"], tracking=-1.4, cls="r r1")
@@ -264,7 +266,7 @@ def hero(theme: str) -> str:
     # a fanned deck of three cards: the recurring object in the work (cards, sheets, tiles)
     c.define(f'<linearGradient id="ac" x1="0" y1="0" x2="1" y2="1">'
              f'<stop offset="0" stop-color="#f28b5f"/><stop offset="1" stop-color="{t["accent"]}"/></linearGradient>')
-    cx, cy = 704, 132
+    cx, cy = GRID - 184, 132
     cards = [
         ("k3", t["tile"]),
         ("k2", t["tile2"]),
@@ -293,7 +295,7 @@ def hero(theme: str) -> str:
 # --------------------------------------------------------------------------- proof tiles
 
 def stat(theme: str, value: str, label: str, index: int) -> str:
-    c = Card(theme, 216, 128)
+    c = Card(theme, COL4, 128)
     t = c.t
     size, weight = 34, 700
     x, y = 24, 70
@@ -463,7 +465,7 @@ def turnitgenz_motif(c: Card, w: int):
 
 
 def product(theme: str, key: str, name: str, lines: list[str], domain: str, wide: bool = False) -> str:
-    w = 576 if wide else 288
+    w = WIDE if wide else COL3
     c = Card(theme, w, 248)
     {"edie": edie_motif, "splitfast": splitfast_motif, "fluttertune": fluttertune_motif,
      "croomfs": croomfs_motif, "turnitgenz": turnitgenz_motif}[key](c, w)
@@ -473,7 +475,7 @@ def product(theme: str, key: str, name: str, lines: list[str], domain: str, wide
 
 def hash_strip(theme: str) -> str:
     key, name, desc, domain, _ = HASH
-    c = Card(theme, 864, 120)
+    c = Card(theme, GRID, 120)
     t = c.t
     # the hash mark draws itself, stroke by stroke
     ox, oy = 34, 30
@@ -488,14 +490,14 @@ def hash_strip(theme: str) -> str:
     )
     c.text(112, 54, name, 18, 600, t["text"], tracking=-0.3)
     c.text(112, 78, desc, 13, 400, t["text2"])
-    c.text(840, 66, domain, 12, 500, t["text3"], anchor="end")
+    c.text(GRID - 24, 66, domain, 12, 500, t["text3"], anchor="end")
     return c.render()
 
 
 # --------------------------------------------------------------------------- package cards
 
 def pkg_area(c: Card):
-    x, y, w, h = 16, 16, 184, 84
+    x, y, w, h = 16, 16, COL4 - 32, 84
     cid = c.clip(x, y, w, h, 12)
     c.add(f'<g clip-path="url(#{cid})"><rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{c.t["tile"]}"/>')
     return x, y, w, h
@@ -672,15 +674,16 @@ PKG_MOTIFS = {
 
 
 def package(theme: str, key: str, name: str, lines: list[str], version: str | None) -> str:
-    c = Card(theme, 216, 196)
+    c = Card(theme, COL4, 196)
     t = c.t
     PKG_MOTIFS[key](c)
     c.text(24, 128, name, 14, 600, t["text"], tracking=-0.2)
     if version:
         label = "v" + version
         pw = FONTS.measure(label, 500, 10) + 14
-        c.add(f'<rect x="{194 - pw:.1f}" y="22" width="{pw:.1f}" height="18" rx="9" fill="{t["surface"]}" fill-opacity=".92"/>')
-        c.text(194 - pw / 2, 34.5, label, 10, 500, t["text3"], anchor="middle")
+        right = COL4 - 22
+        c.add(f'<rect x="{right - pw:.1f}" y="22" width="{pw:.1f}" height="18" rx="9" fill="{t["surface"]}" fill-opacity=".92"/>')
+        c.text(right - pw / 2, 34.5, label, 10, 500, t["text3"], anchor="middle")
     for i, line in enumerate(lines):
         c.text(24, 149 + i * 17, line, 12, 400, t["text2"])
     return c.render()
@@ -763,7 +766,7 @@ def build(live: dict):
         stats = [
             (live["prism_downloads"], "downloads on Prism"),
             (f"{live['prism_stars']:,}", "GitHub stars on Prism"),
-            (fmt_contributions(live["contributions"]), "contributions in the last year"),
+            (fmt_contributions(live["contributions"]), "contributions last year"),
             (str(len(PACKAGES)), "packages on pub.dev"),
         ]
         for i, (value, label) in enumerate(stats):

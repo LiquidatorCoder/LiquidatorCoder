@@ -25,16 +25,16 @@ def img(name: str, width: int, href: str = "#") -> str:
 
 
 rows = [
-    img("hero", 864),
+    img("hero", 840),
     "".join(img(f"chip-{n}", 0) for n in ("portfolio", "linkedin", "x", "contact")),
-    "".join(img(f"stat-{i}", 216) for i in (1, 2, 3, 4)),
+    "".join(img(f"stat-{i}", 210) for i in (1, 2, 3, 4)),
     "<h2>Products</h2>",
-    img("product-edie", 576) + img("product-splitfast", 288),
-    img("product-fluttertune", 288) + img("product-croomfs", 288) + img("product-turnitgenz", 288),
-    img("hashstudios", 864),
+    img("product-edie", 560) + img("product-splitfast", 280),
+    img("product-fluttertune", 280) + img("product-croomfs", 280) + img("product-turnitgenz", 280),
+    img("hashstudios", 840),
     "<h2>Flutter packages</h2>",
-    "".join(img(f"pkg-{k}", 216) for k in ("bubbles_sheet", "morph_route", "flywheel_carousel", "flutter_mesh_transform")),
-    "".join(img(f"pkg-{k}", 216) for k in ("arsenal", "flip_card_swiper", "flutter_debug_tools", "better_textfield")),
+    "".join(img(f"pkg-{k}", 210) for k in ("bubbles_sheet", "morph_route", "flywheel_carousel", "flutter_mesh_transform")),
+    "".join(img(f"pkg-{k}", 210) for k in ("arsenal", "flip_card_swiper", "flutter_debug_tools", "better_textfield")),
     "<h2>Writing</h2><ul><li><a href='#'>Creating a smooth stacked cards animation in Flutter</a></li>"
     "<li><a href='#'>Building your first app in Flutter</a></li><li><a href='#'>Effective Skeleton Loader in Flutter</a></li>"
     "<li><a href='#'>Making your first game in Kivy &amp; Python</a></li></ul>",
@@ -46,7 +46,7 @@ html_rows = "\n".join(f"<p>{r}</p>" if not r.startswith("<h2") else r for r in r
 print(f"""<!doctype html><meta charset="utf-8"><title>README preview ({theme})</title>
 <style>
 body{{margin:0;background:{bg};color:{fg};font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif}}
-.wrap{{max-width:880px;margin:0 auto;padding:32px 16px}}
+.wrap{{width:846px;margin:0 auto;padding:32px 0}}
 p{{margin:0 0 8px}} img{{max-width:100%;vertical-align:top}}
 h2{{font-size:24px;font-weight:600;padding-bottom:.3em;border-bottom:1px solid {line};margin:24px 0 16px}}
 a{{color:#4493f8;text-decoration:none}} ul{{padding-left:2em;margin:0 0 16px}}

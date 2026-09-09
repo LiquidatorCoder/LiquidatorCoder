@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+"""Render a self-contained HTML preview of the README card layout for one theme.
+
+    python3 scripts/cards/preview.py dark  > preview-dark.html
+    python3 scripts/cards/preview.py light > preview-light.html
+
+The page mimics GitHub's profile README column (880px, markdown-body colours) and
+inlines every SVG as a data URI, so it can be opened anywhere with animations playing.
+"""
+import base64
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+CARDS = ROOT / "assets" / "cards"
+
+theme = sys.argv[1] if len(sys.argv) > 1 else "dark"
+bg, fg, muted, line = ("#0d1117", "#f0f6fc", "#9198a1", "#3d444d") if theme == "dark" else ("#ffffff", "#1f2328", "#59636e", "#d1d9e0")
+
+
+def img(name: str, width: int, href: str = "#") -> str:
+    svg = (CARDS / f"{name}-{theme}.svg").read_bytes()
+    uri = "data:image/svg+xml;base64," + base64.b64encode(svg).decode()
+    return f'<a href="{href}"><img src="{uri}" width="{width}" alt="{name}"></a>'
+
+
+rows = [
+    img("hero", 864),
+    "".join(img(f"chip-{n}", 0) for n in ("portfolio", "linkedin", "x", "contact")),
+    "".join(img(f"stat-{i}", 216) for i in (1, 2, 3, 4)),
+    "<h2>Products</h2>",
+    img("product-edie", 576) + img("product-splitfast", 288),
+    img("product-fluttertune", 288) + img("product-croomfs", 288) + img("product-turnitgenz", 288),
+    img("hashstudios", 864),
+    "<h2>Flutter packages</h2>",
+    "".join(img(f"pkg-{k}", 216) for k in ("bubbles_sheet", "morph_route", "flywheel_carousel", "flutter_mesh_transform")),
+    "".join(img(f"pkg-{k}", 216) for k in ("arsenal", "flip_card_swiper", "flutter_debug_tools", "better_textfield")),
+    "<h2>Writing</h2><ul><li><a href='#'>Creating a smooth stacked cards animation in Flutter</a></li>"
+    "<li><a href='#'>Building your first app in Flutter</a></li><li><a href='#'>Effective Skeleton Loader in Flutter</a></li>"
+    "<li><a href='#'>Making your first game in Kivy &amp; Python</a></li></ul>",
+]
+
+# chips have their intrinsic width; drop the width attribute for them
+html_rows = "\n".join(f"<p>{r}</p>" if not r.startswith("<h2") else r for r in rows).replace(' width="0"', "")
+
+print(f"""<!doctype html><meta charset="utf-8"><title>README preview ({theme})</title>
+<style>
+body{{margin:0;background:{bg};color:{fg};font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif}}
+.wrap{{max-width:880px;margin:0 auto;padding:32px 16px}}
+p{{margin:0 0 8px}} img{{max-width:100%;vertical-align:top}}
+h2{{font-size:24px;font-weight:600;padding-bottom:.3em;border-bottom:1px solid {line};margin:24px 0 16px}}
+a{{color:#4493f8;text-decoration:none}} ul{{padding-left:2em;margin:0 0 16px}}
+</style>
+<div class="wrap">
+{html_rows}
+</div>""")

@@ -34,27 +34,28 @@ LIVE_FILE = ROOT / "scripts" / "cards" / "live.json"
 
 # --------------------------------------------------------------------------- content
 
+WIDE_PRODUCTS = {"edie", "hashstudios"}
+
 PRODUCTS = [
-    # key, name, description lines, domain, href
-    ("edie", "edie", ["AI video editing on your phone. Describe the cut,", "get a real timeline back, finish it by hand."], "edie.video", "https://edie.video"),
-    ("splitfast", "SplitFast", ["Split group expenses from a link.", "No app, no signup."], "splitfast.app", "https://splitfast.app"),
-    ("fluttertune", "fluttertune", ["AI performance tuning for Flutter apps.", "Diagnose jank, cut startup time."], "fluttertune.com", "https://fluttertune.com"),
-    ("croomfs", "croomfs", ["Meet people your mutuals follow.", "Crush on a tweet, not a photo."], "croomfs.com", "https://croomfs.com"),
-    ("turnitgenz", "Turn It Gen Z", ["Turn any text into Gen Z slang.", "Pick a vibe, translate for free."], "turnitgenz.com", "https://turnitgenz.com"),
+    # key, name, description, domain, href
+    ("edie", "edie", "AI video editing on your phone. Describe the cut, get a real timeline back, finish it by hand.", "edie.video", "https://edie.video"),
+    ("splitfast", "SplitFast", "Split group expenses from a link. No app, no signup.", "splitfast.app", "https://splitfast.app"),
+    ("fluttertune", "fluttertune", "AI performance tuning for Flutter apps. Diagnose jank, cut startup time.", "fluttertune.com", "https://fluttertune.com"),
+    ("croomfs", "croomfs", "Meet people your mutuals follow. Crush on a tweet, not a photo.", "croomfs.com", "https://croomfs.com"),
+    ("turnitgenz", "Turn It Gen Z", "Turn any text into Gen Z slang. Pick a vibe, translate for free.", "turnitgenz.com", "https://turnitgenz.com"),
+    ("hashstudios", "Hash Studios", "A two-person studio designing and building Flutter apps for founders. Design and build, no handoff.", "hashstudios.in", "https://hashstudios.in"),
 ]
 
-HASH = ("hashstudios", "Hash Studios", "A two-person studio designing and building Flutter apps for founders. Design and build, no handoff.", "hashstudios.in", "https://hashstudios.in")
-
 PACKAGES = [
-    # key, pub.dev name, description lines
-    ("bubbles_sheet", "bubbles_sheet", ["iOS 26-style modal sheets", "with detents and sticky CTAs."]),
-    ("morph_route", "morph_route", ["Tile-to-screen container", "morph with blur and tilt."]),
-    ("flywheel_carousel", "flywheel_carousel", ["Arc-shaped carousel. Flick,", "coast, snap to a card."]),
-    ("flutter_mesh_transform", "flutter_mesh_transform", ["Spring-driven mesh warp", "for any widget."]),
-    ("arsenal", "arsenal", ["Cyberpunk design system:", "components, theme, fonts."]),
-    ("flip_card_swiper", "flip_card_swiper", ["Swipeable cards with flip", "animations and haptics."]),
-    ("flutter_debug_tools", "flutter_debug_tools", ["In-app inspector for UI and", "performance issues."]),
-    ("better_textfield", "better_textfield", ["Text fields that size", "themselves properly."]),
+    # key, pub.dev name, description
+    ("bubbles_sheet", "bubbles_sheet", "iOS 26-style modal sheets with detents and sticky CTAs."),
+    ("morph_route", "morph_route", "Tile-to-screen container morph with blur and tilt."),
+    ("flywheel_carousel", "flywheel_carousel", "Arc-shaped carousel. Flick, coast, snap to a card."),
+    ("flutter_mesh_transform", "flutter_mesh_transform", "Spring-driven mesh warp for any widget."),
+    ("arsenal", "arsenal", "Cyberpunk design system: components, theme, fonts."),
+    ("flip_card_swiper", "flip_card_swiper", "Swipeable cards with flip animations and haptics."),
+    ("flutter_debug_tools", "flutter_debug_tools", "In-app inspector for UI and performance issues."),
+    ("better_textfield", "better_textfield", "Text fields that size themselves properly."),
 ]
 
 DEFAULT_LIVE = {
@@ -90,8 +91,10 @@ THEMES = {
 FONT_STACK = "'Inter',-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif"
 INSET = 8
 RADIUS = 20
-# GitHub renders the profile README in an 846px column; the grid is 840 with 16px gutters
-GRID, WIDE, COL3, COL4 = 840, 560, 280, 210
+# Cards are designed at these sizes and rendered at SCALE. GitHub shows the profile README in an
+# 846px column, so the displayed grid is 840px: four 210px columns with 16px gutters.
+SCALE = 0.85
+GRID, WIDE, COL = 988, 494, 247
 
 
 def esc(s: str) -> str:
@@ -151,6 +154,22 @@ class Fonts:
 
 
 FONTS = Fonts(FONT_SRC)
+
+
+def wrap(text: str, weight: int, size: float, maxw: float, max_lines: int = 3) -> list[str]:
+    """Greedy word wrap using the embedded font's metrics."""
+    lines, cur = [], ""
+    for word in text.split():
+        cand = f"{cur} {word}".strip()
+        if cur and FONTS.measure(cand, weight, size) > maxw:
+            lines.append(cur)
+            cur = word
+        else:
+            cur = cand
+    if cur:
+        lines.append(cur)
+    assert len(lines) <= max_lines, f"copy too long for card: {text!r} -> {lines}"
+    return lines
 
 
 # --------------------------------------------------------------------------- card builder
@@ -224,7 +243,7 @@ class Card:
             f'rx="{RADIUS}" fill="{t["surface"]}" stroke="url(#bd)"{filt}/>'
         )
         return (
-            f'<svg xmlns="http://www.w3.org/2000/svg" width="{self.w}" height="{self.h}" viewBox="0 0 {self.w} {self.h}">'
+            f'<svg xmlns="http://www.w3.org/2000/svg" width="{round(self.w * SCALE)}" height="{round(self.h * SCALE)}" viewBox="0 0 {self.w} {self.h}">'
             f'<style><![CDATA[{faces}{base_css}{"".join(self.css)}]]></style>'
             f'<defs>{border}{shadow}{"".join(self.defs)}</defs>'
             f'{surface}{"".join(self.parts)}</svg>'
@@ -298,7 +317,7 @@ def hero(theme: str) -> str:
 # --------------------------------------------------------------------------- proof tiles
 
 def stat(theme: str, value: str, label: str, index: int) -> str:
-    c = Card(theme, COL4, 128)
+    c = Card(theme, COL, 128)
     t = c.t
     size, weight = 34, 700
     x, y = 24, 70
@@ -327,12 +346,12 @@ def stat(theme: str, value: str, label: str, index: int) -> str:
 
 # --------------------------------------------------------------------------- product cards
 
-def product_frame(c: Card, w: int, name: str, lines: list[str], domain: str):
+def product_frame(c: Card, w: int, name: str, desc: str, domain: str):
     t = c.t
     c.text(24, 160, name, 18, 600, t["text"], tracking=-0.3)
-    for i, line in enumerate(lines):
-        c.text(24, 183 + i * 18, line, 13, 400, t["text2"])
-    c.text(w - 24, 228, domain, 12, 500, t["text3"], anchor="end")
+    for i, line in enumerate(wrap(desc, 400, 13, w - 48)):
+        c.text(24, 183 + i * 17, line, 13, 400, t["text2"])
+    c.text(w - 24, 238, domain, 11, 500, t["text3"], anchor="end")
 
 
 def motif_area(c: Card, w: int, h: int = 108):
@@ -467,40 +486,41 @@ def turnitgenz_motif(c: Card, w: int):
     )
 
 
-def product(theme: str, key: str, name: str, lines: list[str], domain: str, wide: bool = False) -> str:
-    w = WIDE if wide else COL3
-    c = Card(theme, w, 248)
+def product(theme: str, key: str, name: str, desc: str, domain: str, wide: bool = False) -> str:
+    w = WIDE if wide else COL
+    c = Card(theme, w, 256)
     {"edie": edie_motif, "splitfast": splitfast_motif, "fluttertune": fluttertune_motif,
-     "croomfs": croomfs_motif, "turnitgenz": turnitgenz_motif}[key](c, w)
-    product_frame(c, w, name, lines, domain)
+     "croomfs": croomfs_motif, "turnitgenz": turnitgenz_motif, "hashstudios": hash_motif}[key](c, w)
+    product_frame(c, w, name, desc, domain)
     return c.render()
 
 
-def hash_strip(theme: str) -> str:
-    key, name, desc, domain, _ = HASH
-    c = Card(theme, GRID, 120)
+def hash_motif(c: Card, w: int):
     t = c.t
-    # the hash mark draws itself, stroke by stroke
-    ox, oy = 34, 30
+    cid, x, y, mw, mh = motif_area(c, w)
+    c.add(f'<g clip-path="url(#{cid})"><rect x="{x}" y="{y}" width="{mw}" height="{mh}" fill="{t["tile"]}"/>')
+    ox, oy = x + 36, y + 24
     strokes = [(ox + 16, oy + 2, ox + 12, oy + 58), (ox + 40, oy + 2, ox + 36, oy + 58),
                (ox + 2, oy + 22, ox + 54, oy + 22), (ox - 2, oy + 40, ox + 50, oy + 40)]
     c.style(".hs{animation:hash 7s $OUT infinite}")
     for i, (x1, y1, x2, y2) in enumerate(strokes):
         c.add(f'<line class="hs h{i}" x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{t["accent"]}" stroke-width="7" stroke-linecap="round" stroke-dasharray="70" stroke-dashoffset="75"/>')
         c.style(".h%d{animation-delay:%.2fs}" % (i, i * 0.18))
-    c.style(
-        "@keyframes hash{0%{stroke-dashoffset:75;opacity:1}18%,80%{stroke-dashoffset:0;opacity:1}90%,100%{stroke-dashoffset:0;opacity:0}}"
-    )
-    c.text(112, 54, name, 18, 600, t["text"], tracking=-0.3)
-    c.text(112, 78, desc, 13, 400, t["text2"])
-    c.text(GRID - 24, 66, domain, 12, 500, t["text3"], anchor="end")
-    return c.render()
+    c.style("@keyframes hash{0%{stroke-dashoffset:75;opacity:1}18%,80%{stroke-dashoffset:0;opacity:1}90%,100%{stroke-dashoffset:0;opacity:0}}")
+    # three app tiles: the studio's output, shipping one after another
+    c.style(".tl{transform-box:fill-box;transform-origin:center;animation:pop 7s $SPRING infinite}")
+    for i, fill in enumerate((t["tile3"], t["tile2"], t["accent"])):
+        tx = x + 150 + i * 64
+        c.add(f'<g class="tl t{i}"><rect x="{tx}" y="{y + 30}" width="48" height="48" rx="13" fill="{fill}"/></g>')
+        c.style(".t%d{animation-delay:%.2fs}" % (i, 0.9 + i * 0.28))
+    c.style("@keyframes pop{0%{transform:scale(0);opacity:0}12%,78%{transform:scale(1);opacity:1}88%,100%{transform:scale(0);opacity:0}}")
+    c.add("</g>")
 
 
 # --------------------------------------------------------------------------- package cards
 
 def pkg_area(c: Card):
-    x, y, w, h = 16, 16, COL4 - 32, 84
+    x, y, w, h = 16, 16, COL - 32, 84
     cid = c.clip(x, y, w, h, 12)
     c.add(f'<g clip-path="url(#{cid})"><rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{c.t["tile"]}"/>')
     return x, y, w, h
@@ -624,7 +644,8 @@ def m_flip(c: Card):
 def m_debug(c: Card):
     t = c.t
     x, y, w, h = pkg_area(c)
-    blocks = [(x + 18, y + 14, 148, 12), (x + 18, y + 34, 66, 36), (x + 94, y + 34, 72, 16), (x + 94, y + 56, 72, 14)]
+    ox = x + (w - 148) / 2
+    blocks = [(ox, y + 14, 148, 12), (ox, y + 34, 66, 36), (ox + 76, y + 34, 72, 16), (ox + 76, y + 56, 72, 14)]
     for bx, by, bw, bh in blocks:
         c.add(f'<rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="4" fill="{t["tile3"]}"/>')
     for i, (bx, by, bw, bh) in enumerate(blocks[1:]):
@@ -644,7 +665,7 @@ def m_debug(c: Card):
 def m_textfield(c: Card):
     t = c.t
     x, y, w, h = pkg_area(c)
-    fx, fy, fw = x + 22, y + 14, 140
+    fx, fy, fw = x + (w - 140) / 2, y + 14, 140
     field = "#2a2a30" if c.theme == "dark" else "#ffffff"
     for i, fh in enumerate((24, 40, 56)):
         c.add(f'<rect class="f f{i}" x="{fx}" y="{fy}" width="{fw}" height="{fh}" rx="8" fill="{field}" stroke="{t["accent"]}" stroke-width="1.5"/>')
@@ -676,18 +697,18 @@ PKG_MOTIFS = {
 }
 
 
-def package(theme: str, key: str, name: str, lines: list[str], version: str | None) -> str:
-    c = Card(theme, COL4, 196)
+def package(theme: str, key: str, name: str, desc: str, version: str | None) -> str:
+    c = Card(theme, COL, 196)
     t = c.t
     PKG_MOTIFS[key](c)
     c.text(24, 128, name, 14, 600, t["text"], tracking=-0.2)
     if version:
         label = "v" + version
         pw = FONTS.measure(label, 500, 10) + 14
-        right = COL4 - 22
+        right = COL - 22
         c.add(f'<rect x="{right - pw:.1f}" y="22" width="{pw:.1f}" height="18" rx="9" fill="{t["surface"]}" fill-opacity=".92"/>')
         c.text(right - pw / 2, 34.5, label, 10, 500, t["text3"], anchor="middle")
-    for i, line in enumerate(lines):
+    for i, line in enumerate(wrap(desc, 400, 12, COL - 48)):
         c.text(24, 149 + i * 17, line, 12, 400, t["text2"])
     return c.render()
 
@@ -774,11 +795,10 @@ def build(live: dict):
         ]
         for i, (value, label) in enumerate(stats):
             out(f"stat-{i + 1}", theme, stat(theme, value, label, i))
-        for key, name, lines, domain, _ in PRODUCTS:
-            out(f"product-{key}", theme, product(theme, key, name, lines, domain, wide=(key == "edie")))
-        out("hashstudios", theme, hash_strip(theme))
-        for key, name, lines in PACKAGES:
-            out(f"pkg-{key}", theme, package(theme, key, name, lines, live["versions"].get(name)))
+        for key, name, desc, domain, _ in PRODUCTS:
+            out(f"product-{key}", theme, product(theme, key, name, desc, domain, wide=(key in WIDE_PRODUCTS)))
+        for key, name, desc in PACKAGES:
+            out(f"pkg-{key}", theme, package(theme, key, name, desc, live["versions"].get(name)))
         for label, primary in (("Portfolio", False), ("LinkedIn", False), ("X", False), ("Contact", True)):
             out(f"chip-{label.lower()}", theme, chip(theme, label, primary))
     return written

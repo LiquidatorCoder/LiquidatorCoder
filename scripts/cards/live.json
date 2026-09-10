@@ -1,6 +1,6 @@
 {
   "versions": {
-    "bubbles_sheet": "0.3.1",
+    "bubbles_sheet": "0.4.0",
     "morph_route": "0.1.2",
     "flywheel_carousel": "0.1.0",
     "flutter_mesh_transform": "0.1.1",
@@ -9,7 +9,7 @@
     "flutter_debug_tools": "2.0.5",
     "better_textfield": "0.0.2"
   },
-  "prism_stars": 662,
-  "contributions": 6233,
+  "prism_stars": 663,
+  "contributions": 6249,
   "prism_downloads": "250k+"
 }
